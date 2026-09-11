@@ -1,6 +1,6 @@
 (ns en.core-test
   "Pure-logic unit tests for `en.core` — no crypto, no I/O, runs identically
-  under `clojure -M:test` (JVM) and cljs."
+  under `kbb -M:test` (JVM) and cljs."
   (:require [en.core :as en]
             #?(:clj [clojure.test :refer [deftest is]]
                :cljs [cljs.test :refer-macros [deftest is]])))
