@@ -17,7 +17,7 @@ because ENGI/EN's entire domain is one operation (move a mutual-credit
 balance between two `did:key` agents) and one invariant (net-zero, never
 below a declared credit limit) — `en.core/replay-balances` **reuses**
 `engi.core/fold-balance` unchanged, per agent, rather than duplicating its
-invariant-checking logic. See `src/en/core.cljc`'s namespace docstring for
+invariant-checking logic. See `src/en/core.cljk`'s namespace docstring for
 the exact reuse boundary.
 
 `en.core/replay-balances` takes an **already-finalized**, globally-ordered
@@ -64,10 +64,10 @@ NOT implemented" below.
 ## Layout
 
 ```
-src/en/core.cljc      pure currency-unit logic — NO I/O, NO crypto, NO wall
+src/en/core.cljk      pure currency-unit logic — NO I/O, NO crypto, NO wall
                        clock. Depends only on engi.core (also pure), reused
                        unchanged for per-agent invariant-checked replay.
-test/en/core_test.cljc unit tests: two-agent and multi-agent transfers net
+test/en/core_test.cljk unit tests: two-agent and multi-agent transfers net
                         to zero, credit-limit breach reported as data (never
                         throws), malformed (non-positive amount) transfer
                         throws, empty log is net-zero.

@@ -1,6 +1,6 @@
 ;; en — EN native currency unit riding on kotoba-lang/engi's L1 (ADR-2607993000).
 ;;
-;; `src/en/core.cljc` is pure (no I/O, no crypto, no wall clock) and depends
+;; `src/en/core.cljk` is pure (no I/O, no crypto, no wall clock) and depends
 ;; only on `engi.core` (also pure) — reused unchanged rather than
 ;; duplicating its invariant-checking replay logic. No kotobase.net I/O
 ;; layer exists yet in this repo (that's follow-up, once a real
