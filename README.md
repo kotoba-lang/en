@@ -76,6 +76,6 @@ test/en/core_test.cljk unit tests: two-agent and multi-agent transfers net
 ## Testing
 
 ```bash
-clojure -M:test   # en.core-test (pure, JVM, no npm needed)
-clojure -M:lint   # clj-kondo, src+test
+kbb -M:test   # en.core-test (pure, JVM, no npm needed)
+kbb -M:lint   # clj-kondo, src+test
 ```
