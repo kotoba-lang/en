@@ -2,7 +2,7 @@
   "Pure-logic unit tests for `en.core` — no crypto, no I/O, runs identically
   under `kbb -M:test` (JVM) and cljs."
   (:require [en.core :as en]
-            #?(:clj [clojure.test :refer [deftest is]]
+            #?(:clj [kotoba.test :refer [deftest is]]
                :cljs [cljs.test :refer-macros [deftest is]])))
 
 (defn- xfer [spender receiver amount id]
