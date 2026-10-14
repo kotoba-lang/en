@@ -8,6 +8,11 @@
 ;; "Deliberately NOT implemented (v1 scope)".
 {:paths ["src"]
  :deps {
+        io.github.kotoba-lang/inga {:git/url "https://github.com/kotoba-lang/inga.git"
+                                   :git/sha "0c5eceda229ae0a5e6d0f1b9ca834d2db2d1636f"}
+        io.github.kotoba-lang/text {:git/url "https://github.com/kotoba-lang/text.git"
+                                   :git/sha "41718d36ba2f1d86e6c5a11524ee9f904cbaf9a3"}
+
         ;; kotoba.test (clojure.test-compatible surface), not clojure.test --
         ;; scripts/migrate-clojure-test-to-kotoba-test.cljk. Explicit floor.
         io.github.kotoba-lang/test {:git/url "https://github.com/kotoba-lang/test.git"
