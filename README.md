@@ -79,3 +79,13 @@ test/en/core_test.cljk unit tests: two-agent and multi-agent transfers net
 kbb -M:test   # en.core-test (pure, JVM, no npm needed)
 kbb -M:lint   # clj-kondo, src+test
 ```
+
+## Finalized prefix adapter
+
+`en.finality/project` verifies a complete bounded Inga prefix, resolves every
+committed transfer, checks both parties' content and chain/genesis signatures,
+and replays the native mutual-credit invariant. Missing proposals, nonce
+collisions, rollback, forks or exceeded credit floors refuse the entire view.
+A trusted host supplies content IDs, signature verification and credit grants.
+Real-signature/QC fixtures qualify this adapter; they are not production funding
+or proof that the live node's record envelopes are wired into this resolver.
